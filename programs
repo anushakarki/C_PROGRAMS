@@ -81,5 +81,30 @@ int main()
         printf("student=%d:Rollno=%d name=%s\n",i,s[i].rollno,s[i].subtopicdefination);
     }
 }
+3/12/2023 factorial_using_function
+#include<stdio.h>
+int fact(int);
+void main()
+{
+    int ans,n;
+    printf("enter the value of N\n");
+    scanf("%d",&n);
+    ans=fact(n);
+    printf("factorial of a number is :%d",ans);
+}
+int fact(int n)
+{
+    int fact1=1;
+    if(n==1)
+    {
+        return fact1;
+    }
+    else
+    {
+        fact1=n*fact(n-1);
+        return(fact1);
+    }
+}
+
 
 
