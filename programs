@@ -178,6 +178,22 @@ void main()
     }
 
 }
+10/12/2023 call_by_value_function
+#include<stdio.h>
+#include<stdlib.h>
+ void cube(int);
+ int main ()
+ {
+     int a=2;
+     cube(a);
+     printf("\n a=%d",a);
+     return 0;
+ }
+ void cube (int x)
+ {
+     x=x*x*x;
+     printf("\n x=%d",x);
+ }
 
 
 
