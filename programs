@@ -1,5 +1,6 @@
 C Programming 
-28/11/2023 Bubble sort 
+28/11/2023 
+1.Bubble sort 
 #include<stdio.h>
 int main()
 {
@@ -29,8 +30,9 @@ int main()
     printf("%d\n",a[i]);
      }
 }
-
-29/11/2023 Reverse of an array
+-------------------------
+29/11/2023 
+2. Reverse of an array
 #include<stdio.h>
 #define MAX 50
 void main()
@@ -55,9 +57,10 @@ void main()
         printf("%d",arr[i]);
     }
 }
+---------------------------------------------
 
-
-1/12/2023 Structure_of _student_data
+1/12/2023
+3.Structure_of _student_data
 #include<stdio.h>
 struct student
 {
@@ -81,7 +84,9 @@ int main()
         printf("student=%d:Rollno=%d name=%s\n",i,s[i].rollno,s[i].subtopicdefination);
     }
 }
-3/12/2023 factorial_using_function
+------------------------------------------------------------
+3/12/2023
+4.factorial_using_function
 #include<stdio.h>
 int fact(int);
 void main()
@@ -105,7 +110,9 @@ int fact(int n)
         return(fact1);
     }
 }
-6/12/2023 NESTED_SWITCH_CASE
+---------------------------------------------------
+6/12/2023 
+5. NESTED_SWITCH_CASE
 #include<stdio.h>
 #include<stdlib.h>
 void main()
@@ -178,7 +185,9 @@ void main()
     }
 
 }
-10/12/2023 call_by_value_function
+-------------------------------------------------------------
+10/12/2023 
+6. call_by_value_function
 #include<stdio.h>
 #include<stdlib.h>
  void cube(int);
@@ -194,6 +203,206 @@ void main()
      x=x*x*x;
      printf("\n x=%d",x);
  }
+------------------------------------------------------------------------
+5/03/2024 
+7. Displaying the memory address of structure and union members
+#include<stdio.h>
+struct data1
+{
+    int i;
+    float f;
+    char c;
+    double d;
+};
+union data2
+{
+    int i;
+    float f;
+    char c;
+    double d;
+
+};
+void main()
+{
+    struct data1 d1;
+    union data2 d2;
+
+    printf("\n address of struct d1.i=%u",&d1.i);
+    printf("\n address of struct d1.f=%u",&d1.f);
+    printf("\n address of struct d1.c=%u",&d1.c);
+    printf("\n address of struct d1.d=%u",&d1.d);
+
+    printf("\n address of union d2.i=%u",&d2.i);
+    printf("\n address of union d2.f=%u",&d2.f);
+    printf("\n address of union d2.c=%u",&d2.c);
+    printf("\n address of union d2.d=%u",&d2.d );
+}
+output:
+ address of struct d1.i=6422016
+ address of struct d1.f=6422020
+ address of struct d1.c=6422024
+ address of struct d1.d=6422032
+ address of union d2.i=6422008
+ address of union d2.f=6422008
+ address of union d2.c=6422008
+ address of union d2.d=6422008
+
+----------------------------------------------------------
+8. demostration of size of operator
+#include<stdio.h>
+struct data1
+{
+    int i;
+    float f;
+    char c;
+    double d;
+
+};
+
+union data2
+{
+    int i;
+    float f;
+    double d;
+    char c;
+
+};
+void main()
+{
+    struct data1 d1;
+    union  data2 d2;
+
+    printf("\n size of the struct d1=%d",sizeof(d1));
+    printf("\n size of the unoin d2=%d",sizeof(union data2));
+
+
+    printf("\n size of short signed int =%d",sizeof(short signed int));
+    printf("\n size of short unsigned  int =%d",sizeof(short unsigned int));
+    printf("\n size of long signed int =%d",sizeof(long signed int));
+    printf("\n size of long unsigned =%d",sizeof(long unsigned int));
+
+    printf("\n size of int =%d",sizeof(int));
+    printf("\n size of float =%d",sizeof(float));
+    printf("\n size of double =%d",sizeof(double));
+    printf("\n size of char =%d",sizeof(char));
+}
+output:
+ size of the struct d1=24
+ size of the unoin d2=8
+ size of short signed int =2
+ size of short unsigned  int =2
+ size of long signed int =4
+ size of long unsigned =4
+ size of int =4
+ size of float =4
+ size of double =8
+ size of char =1
+--------------------------------
+demostration of intitizing and accessing union member 
+#include<stdio.h>
+union DATA
+{
+    int i;
+    float f;
+    char c;
+    double db;
+
+};
+void main()
+{
+
+    union DATA d;
+    printf("\n size of the d =%d",sizeof(d));
+
+    d.i=10;
+    printf("\ni=%d",d.i);
+
+    d.f=12.4879;
+    printf("\n\ni=%d",d.i);
+    printf("\nf=%f",d.f);
+
+    d.c='A';
+    printf("\n\ni=%d",d.i);
+    printf("\nf=%f",d.f);
+    printf("\nc=%c",d.c);
+    printf("\ndb=%lf",d.db);
+}
+output:
+ size of the d =8
+i=10
+
+i=1095224944
+f=12.487900
+
+i=1095224897
+f=12.487855
+c=A
+db=0.000000
+-------------------------------------
+demonstration of defining the structure with a key word tag
+#include<stdio.h>
+struct tag
+{
+
+    int usn ;
+    char sname[20];
+    float avg;
+
+}s1={1501,"sanjay",67.98};
+void main()
+
+{
+    struct tag s2={1502,"manish",67.44};
+    struct tag s3;
+    s3=s2;
+
+    printf("\nusn:%d",s1.usn);
+    printf("\nname:%s",s1.sname);
+    printf("\navg:%f",s1.avg);
+
+    printf("\nusn:%d",s2.usn);
+    printf("\nname:%s",s2.sname);
+    printf("\navg:%f",s2.avg);
+
+    printf("\nusn:%d",s3.usn);
+    printf("\nname:%s",s3.sname);
+    printf("\navg:%f",s3.avg);
+}
+output:
+
+usn:1501
+name:sanjay
+avg:67.980003
+usn:1502
+name:manish
+avg:67.440002
+usn:1502
+name:manish
+avg:67.440002
+------------------------------------
+demostration of defining the structure without defing the struct name /tag name
+#include<stdio.h>
+struct
+{
+    int usn;
+    char name[20];
+    float avg;
+
+}s={1501,"sanjay",89.89};
+
+void main()
+{
+   printf("\n s:");
+   printf("\n usn:%d",s.usn);
+   printf("\n name:%s",s.name);
+   printf("\n avd:%f",s.avg);
+}
+output:
+ s:
+ usn:1501
+ name:sanjay
+ avd:89.889999
+-------------------------------------------
 
 
 
