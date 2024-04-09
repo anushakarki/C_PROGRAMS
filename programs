@@ -403,7 +403,151 @@ output:
  name:sanjay
  avd:89.889999
 -------------------------------------------
+2/04/24
+Factorial of a number using function 
+#include<stdio.h>
+#include<conio.h>
 
+void main()
+{
+    unsigned int num,f=1,i;
+
+    printf("\n enter the number\n");
+    scanf("%d",&num);
+
+    for(i=1;i<=num;i++)
+    {
+        f=f*i;
+    }
+    printf("%u",f);
+}
+--------------------------------------------------------------
+Factorial of a given number using no return and no arguments
+#include<stdio.h>
+#include<conio.h>
+
+/* function declaration*/
+void fact();
+
+void main()
+{
+    fact();/*call*/
+}
+void fact()
+/*defination*/
+{
+    unsigned int num,f=1,i;
+
+    printf("\n enter a number:");
+    scanf("%u",&num);
+
+    for (i=1;i<=num;i++)
+    {
+        f=f*i;
+    }
+    printf("\n factorail of given number is %u",f);
+}
+----------------------------------------------------------------
+Factorial with return value but no arguments
+#include<stdio.h>
+#include<conio.h>
+
+/*function declaration*/
+
+int fact();
+
+void main()
+{
+    int f;
+/*function call*/
+f=fact();
+printf("\n factorial of a given number is :%u",f);
+}
+/* function defination*/
+int fact ()
+{
+    unsigned int num,f=1,i;
+    printf("\nenter the number:");
+    scanf("%u",&num);
+    for(i=1;i<=num;i++)
+    {
+        f=f*i;
+    }
+    return (f);
+}
+------------------------------------------------------------------
+Factorial of a number with return values but with arguments 
+#include<stdio.h>
+#include<conio.h>
+/*function declaration*/
+void fact();
+void main()
+{
+    unsigned int f,num;
+    printf("\n enter the number:");
+    scanf("%d",&num);
+    /*call*/
+    void fact(num);
+    /*defination*/
+    void fact(unsigned int num);
+    {
+        unsigned int f=1,i;
+        for(i=1;i<=num;i++)
+        {
+            f=f*i;
+        }
+        printf("\n factorial of a given number is %u",f);
+    }
+}
+----------------------------------------------------------------------
+Factorial of a given number with return and with arguments 
+#include<stdio.h>
+#include<conio.h>
+
+/*declaration*/
+
+unsigned int fact (unsigned int num);
+int main()
+{
+
+    unsigned int num,f;
+
+    printf("\n enter the number:");
+    scanf("%u",&num);
+    f=fact(num);
+    printf("\n factorial of given number is %u",f);
+}
+unsigned int fact(unsigned int num)
+{
+    unsigned int f=1,i;
+    for (i=1;i<=num;i++)
+    {
+        f=f*i;
+    }
+    return(f);
+}
+---------------------------------------------------------------------------------------
+Demonstrating of defining function before the main function and value which is returned by the function will be redirected to output
+#include<stdio.h>
+#include<conio.h>
+/*defination*/
+int fact(int num)
+{
+    int f=1,i;
+    for(i=1;i<=num;i++)
+    {
+        f=f*i;
+    }
+    return(f);
+}
+void main()
+{
+    int num;
+    printf("\nenter the number");
+    scanf("%d",&num);
+    printf("\n factorial of given number:%d",fact(num));
+}
+-------------------------------------------------------------------------------
 
 
 
