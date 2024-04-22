@@ -548,6 +548,28 @@ void main()
     printf("\n factorial of given number:%d",fact(num));
 }
 -------------------------------------------------------------------------------
+23/04/2024
+demonstartion of recursive function
+#include<stdio.h>
+#include<conio.h>
+ int fact(int num)
+ {
+     if(num==0)
+        return(1);
+     else
+        return(num*fact(num-1));
+ }
+ void main(){
+ int num;
+
+
+ printf("enter the number\n");
+ scanf("%d",&num);
+ printf("\n factorial of given number is %d",fact(num));
+
+
+ }
+---------------------------------------------------------------------------------
 
 
 
