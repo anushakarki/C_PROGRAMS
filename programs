@@ -570,6 +570,43 @@ demonstartion of recursive function
 
  }
 ---------------------------------------------------------------------------------
+24/4/2023
+passing arrays to function
+#include<stdio.h>
+
+void read_array(int a[100],int n);
+void print_array(int a[100],int n);
+int i;
+
+void main()
+{
+    int a[100],n;
+    printf("\n enter the size of array\n");
+    scanf("%d",&n);
+
+    printf("\n enter %d array elements \n",n);
+    read_array(a,n);
+
+    printf("\n given %d array elements are:",n);
+    print_array(a,n);
+
+}
+void read_array(int a[100],int n)
+
+{
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+}
+    void print_array(int a[100],int n)
+
+    {
+        for(i=0;i<n;i++)
+        {
+            printf("%d\n",a[i]);
+        }
+    }
+
+
 
 
 
