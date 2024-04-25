@@ -30,7 +30,7 @@ int main()
     printf("%d\n",a[i]);
      }
 }
--------------------------
+------------------------------------------------------------------------------------------------------------------------
 29/11/2023 
 2. Reverse of an array
 #include<stdio.h>
@@ -57,7 +57,7 @@ void main()
         printf("%d",arr[i]);
     }
 }
----------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
 1/12/2023
 3.Structure_of _student_data
@@ -84,7 +84,7 @@ int main()
         printf("student=%d:Rollno=%d name=%s\n",i,s[i].rollno,s[i].subtopicdefination);
     }
 }
-------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 3/12/2023
 4.factorial_using_function
 #include<stdio.h>
@@ -110,7 +110,7 @@ int fact(int n)
         return(fact1);
     }
 }
----------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 6/12/2023 
 5. NESTED_SWITCH_CASE
 #include<stdio.h>
@@ -185,7 +185,7 @@ void main()
     }
 
 }
--------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 10/12/2023 
 6. call_by_value_function
 #include<stdio.h>
@@ -203,7 +203,7 @@ void main()
      x=x*x*x;
      printf("\n x=%d",x);
  }
-------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 5/03/2024 
 7. Displaying the memory address of structure and union members
 #include<stdio.h>
@@ -247,7 +247,7 @@ output:
  address of union d2.c=6422008
  address of union d2.d=6422008
 
-----------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 8. demostration of size of operator
 #include<stdio.h>
 struct data1
@@ -297,8 +297,8 @@ output:
  size of float =4
  size of double =8
  size of char =1
---------------------------------
-demostration of intitizing and accessing union member 
+------------------------------------------------------------------------------------------------------------------------
+10.demostration of intitizing and accessing union member 
 #include<stdio.h>
 union DATA
 {
@@ -338,8 +338,8 @@ i=1095224897
 f=12.487855
 c=A
 db=0.000000
--------------------------------------
-demonstration of defining the structure with a key word tag
+------------------------------------------------------------------------------------------------------------------------
+11. demonstration of defining the structure with a key word tag
 #include<stdio.h>
 struct tag
 {
@@ -379,8 +379,8 @@ avg:67.440002
 usn:1502
 name:manish
 avg:67.440002
-------------------------------------
-demostration of defining the structure without defing the struct name /tag name
+------------------------------------------------------------------------------------------------------------------------
+12.demostration of defining the structure without defing the struct name /tag name
 #include<stdio.h>
 struct
 {
@@ -402,9 +402,9 @@ output:
  usn:1501
  name:sanjay
  avd:89.889999
--------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 2/04/24
-Factorial of a number using function 
+13.Factorial of a number using function 
 #include<stdio.h>
 #include<conio.h>
 
@@ -421,8 +421,8 @@ void main()
     }
     printf("%u",f);
 }
---------------------------------------------------------------
-Factorial of a given number using no return and no arguments
+------------------------------------------------------------------------------------------------------------------------
+14.Factorial of a given number using no return and no arguments
 #include<stdio.h>
 #include<conio.h>
 
@@ -447,8 +447,8 @@ void fact()
     }
     printf("\n factorail of given number is %u",f);
 }
-----------------------------------------------------------------
-Factorial with return value but no arguments
+------------------------------------------------------------------------------------------------------------------------
+15.Factorial with return value but no arguments
 #include<stdio.h>
 #include<conio.h>
 
@@ -475,8 +475,8 @@ int fact ()
     }
     return (f);
 }
-------------------------------------------------------------------
-Factorial of a number with return values but with arguments 
+------------------------------------------------------------------------------------------------------------------------
+16.Factorial of a number with return values but with arguments 
 #include<stdio.h>
 #include<conio.h>
 /*function declaration*/
@@ -499,8 +499,8 @@ void main()
         printf("\n factorial of a given number is %u",f);
     }
 }
-----------------------------------------------------------------------
-Factorial of a given number with return and with arguments 
+------------------------------------------------------------------------------------------------------------------------
+17.Factorial of a given number with return and with arguments 
 #include<stdio.h>
 #include<conio.h>
 
@@ -526,8 +526,8 @@ unsigned int fact(unsigned int num)
     }
     return(f);
 }
----------------------------------------------------------------------------------------
-Demonstrating of defining function before the main function and value which is returned by the function will be redirected to output
+------------------------------------------------------------------------------------------------------------------------
+18.Demonstrating of defining function before the main function and value which is returned by the function will be redirected to output
 #include<stdio.h>
 #include<conio.h>
 /*defination*/
@@ -547,9 +547,9 @@ void main()
     scanf("%d",&num);
     printf("\n factorial of given number:%d",fact(num));
 }
--------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 23/04/2024
-demonstartion of recursive function
+19.demonstartion of recursive function
 #include<stdio.h>
 #include<conio.h>
  int fact(int num)
@@ -569,9 +569,9 @@ demonstartion of recursive function
 
 
  }
----------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 24/4/2023
-passing arrays to function
+20.passing arrays to function
 #include<stdio.h>
 
 void read_array(int a[100],int n);
@@ -605,6 +605,288 @@ void read_array(int a[100],int n)
             printf("%d\n",a[i]);
         }
     }
+------------------------------------------------------------------------------------------------------------------------
+25/04/2024
+21.check whether the given number is palindrom or not ,write a separate function which will return reverse of a integer number
+#include<stdio.h>
+
+int reverse(int num)
+{
+    int digit,rev=0;
+    while(num>0)
+    {
+        digit=num%10;
+        rev=rev*10+digit;
+        num=num/10;
+    }
+    return(rev);
+}
+void main()
+{
+    int num;
+    printf("/n enter the number:");
+    scanf("%d",&num);
+    if(num==reverse(num))
+        printf("\n given number is palindrom");
+    else
+        printf("/n given number is not palindrom");
+
+}
+------------------------------------------------------------------------------------------------------------------
+22.accepting and displaying the char using character ip op fun getch and putch
+#include<stdio.h>
+void main()
+{
+    char ch;
+
+    printf("\n enter the character");
+    ch=getch();
+    printf("\n given character:");  //here it will display
+    putch(ch);
+    getch();
+}
+------------------------------------------------------------------------------------------------------------------------
+23.demostrating of getch() function to accept and display a single char
+#include<stdio.h>
+void main()
+{
+    char ch;
+
+    printf("\n enter the character"); display here
+    ch=getch();
+    printf("\n given character:"); display here
+    putch(ch);
+    getch();
+}
+------------------------------------------------------------------------------------------------------------------------
+24.demostration of getche()function to accept and display a single char
+
+#include<stdio.h>
+void main()
+{
+    char ch;
+    printf("\n enter the character:");
+    ch=getche();
+    printf("\n given character:");
+    putch(ch);
+
+}
+------------------------------------------------------------------------------------------------------------------------
+25. demostration of getchar() function to accept and display a single char
+#include<stdio.h>
+void main()
+{
+    char ch;
+    printf("\n enter the character:");
+    ch=getchar();
+    printf("\n given character:");
+    putch(ch);
+    getch();
+}
+------------------------------------------------------------------------------------------------------------------------
+26. check whether given char is an alphabet or not using library function
+#include<stdio.h>
+#include<ctype.h>
+
+void main()
+{
+    char ch;
+
+    printf("\n enter a character:");
+    ch=getche();
+
+    if(isalpha(ch))
+        printf("\n given character is an alphabet");
+    else
+        printf("\n given character not an alphabet");
+    getch();
+}
+------------------------------------------------------------------------------------------------------------------------
+27.  check whether given char is an alphabet or without library function
+#include<stdio.h>
+void main()
+{
+    char ch;
+    printf("\n enter the character:");
+    ch=getche();
+
+    if((ch>=65 && ch<=90) || (ch>=97 && ch<=122))
+        printf("\n given character an alphabet");
+    else
+        printf("\n given charater is not alphabet");
+    getch();
+
+}
+------------------------------------------------------------------------------------------------------------------------
+28./* check whether given char is an alphabet or digit or a special char if it an alphabet check its upper or lower case alphabet without using library function*/
+#include<stdio.h>
+void main()
+{
+    char ch;
+
+    printf("\n enter a character:");
+    ch=getche();
+    if((ch>=65 && ch<=90) || (ch>=97 && ch<=122))
+    {
+        if(ch>=65 && ch<=90)
+            printf("\n upper case alphabet");
+        else
+        printf("\n lower case alphabet");
+
+    }
+    else if(ch>=48 && ch<=57)
+    {
+        printf("\n character is a digit");
+    }
+    else
+    {
+        printf("\n is a special character");
+
+    }
+    getch();
+}
+
+
+------------------------------------------------------------------------------------------------------------------------
+29./* check whether given char is an alphabet or not if it id not upper case alphabet display its lower case equivalent and if it is not lower case alphabet display its upper case equivalent using lib_function*/
+#include<stdio.h>
+#include<ctype.h>
+void main()
+{
+    char ch;
+
+    printf("\n enter a character:");
+    ch=getche();
+    if(isalpha(ch))
+    {
+        if(isupper(ch))
+        {
+            printf("\n upper case alphabet is %c",ch);
+            ch=tolower(ch);
+            printf("\n lower case alphabet is %c ",ch);
+        }
+        else if(islower(ch))
+        {
+            printf("\n lower case alphabet is %c",ch);
+            ch=toupper(ch);
+            printf("\n upper case alphabet is %c",ch);
+        }
+    }
+    else{
+        printf("\n given character is not an alphabet:");
+    }
+    getch();
+}
+
+
+------------------------------------------------------------------------------------------------------------------------
+30./* check whether given char is an alphabet or not if it id not upper case alphabet display its lower case equivalent and if it is not lower case alphabet display its upper case equivalent without using lib_function*/
+#include<stdio.h>
+void main()
+{
+    char ch;
+
+    printf("\n enter the character:");
+    ch=getche();
+    if((ch>=65 && ch<=90) || (ch>=97 && ch<=122))
+    {
+        if(ch>=65 && ch <=90)
+        {
+            printf("\n upper case alphabet is %c",ch);
+            ch=ch+32;
+            printf("\n lower case alphabet is %c",ch);
+        }
+        else if(ch>=97 && ch<=122)
+        {
+            printf("\n lower case alphabet is %c",ch);
+            ch=ch-32;
+            printf("\n upper case alphabet is :%c",ch);
+        }
+    }
+    else if(ch>=48 && ch<=57)
+    {
+        printf("\n given character is a digit");
+    }
+    else
+    {
+        printf("\n given character is a special character");
+    }
+    getch();
+}
+
+------------------------------------------------------------------------------------------------------------------------
+31./* check whether given char is an alphabet or digit or a special char if it an alphabet check its upper or lower case alphabet using library function*/
+
+#include<stdio.h>
+#include<ctype.h>
+void main()
+{
+    char ch;
+    printF("\enter the character:");
+    ch=getche();
+    if(isalpha(ch))
+    {
+        if(isupper(ch))
+            printf("\n upper case alphabet");
+        else
+            printf("\n lower case alphabet");
+    }
+    else if(isdigit(ch))
+    {
+        printf("\n given character is a digit");
+    }
+    else
+    {
+        printf("\n special character");
+    }
+    getch();
+}
+------------------------------------------------------------------------------------------------------------------------
+32.check whether given char is an digit or not using library function
+
+#include<stdio.h>
+#include<ctype.h>
+
+void main()
+{
+
+    char ch;
+
+    printf("\n enter the given character:");
+    ch=getche();
+
+    if(isdigit(ch))
+        printf("\n given character is digit");
+    else
+        printf("\n given character is not digit");
+    getch();
+}
+
+------------------------------------------------------------------------------------------------------------------------
+33./*check whether given char is an digit or not without library function*/
+#include<stdio.h>
+
+void main()
+{
+    char ch;
+    printf("\n enter a character:");
+    ch=getche();
+
+    if(ch>=43 && ch<=57)
+        printf("\n given character is a digit");
+    else
+        printf("\n given char is a not a digit \n");
+    getch();
+}
+------------------------------------------------------------------------------------------------------------------------
+34.
+
+
+
+
+
+
+
 
 
 
