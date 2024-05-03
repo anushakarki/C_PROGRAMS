@@ -879,7 +879,78 @@ void main()
     getch();
 }
 ------------------------------------------------------------------------------------------------------------------------
-34.
+34. 3/05/20204
+// program to calculate the areas of circles using a while loop the results are
+ //stored in an array of structures the number of circles is unspecified a string is entered to identify easch data set/
+
+ #include<stdio.h>
+ #define PI 3.124
+ float process(float radius); // function prototype
+
+ int main()
+ {
+    int n,i=0;  //function declaration
+
+    struct
+    {
+        char text[20];
+        float radius;
+        float area; /* structure varaiable declaration */
+    }circle[10];
+    printf("to stop, enter END for the identifier\n");
+    printf("\n identifier:");
+    scanf("%s",circle[i].text);
+    while(circle[i].text[0]!='E'|| circle[i].text[1]!='N' || circle[i].text[2]!='D')
+    {
+        printf("radius");
+        scanf("%f",&circle[i].radius);
+        if(circle[i].radius<0)
+        circle[i].area=0;
+
+        else
+        circle[i].area=process(circle[i].radius);
+        ++i;
+        printf("\n identifier:"); //next set of data//
+        scanf("%s",circle[i].text);
+    }
+    n=--i;   //tag the highest value of i//
+    // display the aary elemnts//
+    printf("\n\n summary of results\n\n");
+    for(i=0;i<=n;i++)
+    printf("%s radius=%f area=%f\n",circle[i].text,circle[i].radius,circle[i].area);
+
+ }
+ float process(float r)  //function defination//
+{
+    float a;  // local variable declaration//
+    a=PI*r*r;
+    return (a);
+}
+output:
+to stop, enter END for the identifier
+
+ identifier:red
+radius4
+
+ identifier:yellow
+radius2
+
+ identifier:PINK
+radius7
+
+ identifier:BLACK
+radius0
+
+ identifier:END
+
+
+ summary of results
+
+red radius=4.000000 area=49.984001
+yellow radius=2.000000 area=12.496000
+PINK radius=7.000000 area=153.076004
+BLACK radius=0.000000 area=0.000000
+
 
 
 
